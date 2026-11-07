@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>hallo</h1>
+    <h1>hallo</h1>
+    <h1>hallo</h1>
+    <h1>hallo</h1>
+    <h1>hallo</h1>
+
+</body>
+<script>
+    const fetchData = async () => {
+        try {
+            const response = await fetch('http://localhost:3000');
+            const data = await response.json();
+            console.log(data);
+            document.querySelectorAll('h1')[0].textContent = data.data.nama;
+            document.querySelectorAll('h1')[1].textContent = data.data.NIM;
+            document.querySelectorAll('h1')[2].textContent = data.data.prodi;
+            document.querySelectorAll('h1')[3].textContent = data.data.Universitas;
+        } catch (error) {
+            console.error('Error fetching data:', error);
+        }
+    };
+
+    fetchData();
+</script>
+</html>
