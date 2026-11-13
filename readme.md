@@ -1,0 +1,1 @@
+Ini merupakan pengaplikasian Fetch API, pada backend membuat data dan data tersebut diambil oleh website dan juga mobile app nya
